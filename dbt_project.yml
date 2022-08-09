@@ -10,19 +10,19 @@ config-version: 2
 profile: 'tuva'
 
 vars:
-  source_name: cclf                     # configuration required
+  source_name: cclf
                                         # name describing the dataset feeding this project
 
-  input_database: syntegra_synthetic_sample                  # configuration required
+  input_database: raw
                                         # name of the database where sources feeding this project are stored
 
-  input_schema:  cclf                   # configuration required
+  input_schema:  medicare_cclf_claims                   
                                         # name of the schema where sources feeding this project is stored
 
-  output_database: demo                 # configuration required
+  output_database: izzy_dev
                                         # name of the database where output of this project should be written
 
-  output_schema: claims_input_layer     # configuration required
+  output_schema: tuva_cclf
                                         # name of the schema where output of this project should be written
 
   beneficiary_demographics: "{{ source(var('source_name'),'beneficiary_demographics') }}"

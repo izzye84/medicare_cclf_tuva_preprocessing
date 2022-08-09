@@ -1,6 +1,6 @@
 select
     cast(h.cur_clm_uniq_id as varchar) as claim_id
-    ,cast(d.clm_line_num as int) as claim_line_number
+    --,cast(d.clm_line_num as int) as claim_line_number
     ,cast(h.bene_mbi_id as varchar) as patient_id
     ,cast(h.clm_from_dt as date) as claim_start_date
     ,cast(h.clm_thru_dt as date) as claim_end_date
@@ -15,14 +15,14 @@ select
     ,cast(h.clm_admsn_type_cd as varchar) as admit_type_code
     ,cast(h.bene_ptnt_stus_cd as varchar) as discharge_disposition_code
     ,cast(h.dgns_drg_cd as varchar) as ms_drg
-    ,cast(d.clm_line_prod_rev_ctr_cd as varchar) as revenue_center_code
-    ,cast(d.clm_line_srvc_unit_qty as int) as service_unit_quantity
-    ,cast(d.clm_line_hcpcs_cd as varchar) as hcpcs_code
-    ,cast(d.hcpcs_1_mdfr_cd as varchar) as hcpcs_modifier_1
-    ,cast(d.hcpcs_2_mdfr_cd as varchar) as hcpcs_modifier_2
-    ,cast(d.hcpcs_3_mdfr_cd as varchar) as hcpcs_modifier_3
-    ,cast(d.hcpcs_4_mdfr_cd as varchar) as hcpcs_modifier_4
-    ,cast(d.hcpcs_5_mdfr_cd as varchar) as hcpcs_modifier_5
+    --,cast(d.clm_line_prod_rev_ctr_cd as varchar) as revenue_center_code
+    --,cast(d.clm_line_srvc_unit_qty as int) as service_unit_quantity
+    --,cast(d.clm_line_hcpcs_cd as varchar) as hcpcs_code
+    --,cast(d.hcpcs_2_mdfr_cd as varchar) as hcpcs_modifier_2
+    --,cast(d.hcpcs_3_mdfr_cd as varchar) as hcpcs_modifier_3
+    --,cast(d.hcpcs_1_mdfr_cd as varchar) as hcpcs_modifier_1
+    --,cast(d.hcpcs_4_mdfr_cd as varchar) as hcpcs_modifier_4
+    --,cast(d.hcpcs_5_mdfr_cd as varchar) as hcpcs_modifier_5
     ,cast(h.atndg_prvdr_npi_num as varchar) as rendering_npi
     ,cast(null as varchar) as billing_npi
     ,cast(h.fac_prvdr_npi_num as varchar) as facility_npi
